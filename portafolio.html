@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio Web</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo">
+      <h1><a href="index.html" class="titulo">JP</a></h1>
+            <p>Juan Martínez</p>
+            <span>Diseñador Digital</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="about.html">Sobre mi</a></li>
+                <li><a href="portafolio.html">Portafolio</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="portfolio">
+        <h1>Mi Portafolio</h1>
+        <p class="text-white text-lg mb-10">
+            Aqui dejo una pequeña seccion sobre los proyectos que he trabajado en la carrera. Al hacer clic en cualquier imagen puedes verla en
+            tamaño completo.
+        </p>
+        <h2>Ilustraciones</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="img/Ilustracion 1.png" alt="Proyecto 1">
+                <div class="overlay">
+                    <button class="view-btn" onclick="openModal('img/Ilustracion 1.png')">Ver</button>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/Ilustracion 2.png" alt="Proyecto 1">
+                <div class="overlay">
+                    <button class="view-btn" onclick="openModal('img/Ilustracion 2.png')">Ver</button>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/Ilustracion 3.png" alt="Proyecto 1">
+                <div class="overlay">
+                    <button class="view-btn" onclick="openModal('img/Ilustracion 3.png')">Ver</button>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/Ilustracion 4.png" alt="Proyecto 1">
+                <div class="overlay">
+                    <button class="view-btn" onclick="openModal('img/Ilustracion 4.png')">Ver</button>
+                </div>
+            </div>
+            <!-- Repite por cada imagen -->
+        </div>
+        <h2>Renders</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="img/render.jpg" alt="Proyecto 1">
+                <div class="overlay">
+                    <button class="view-btn" onclick="openModal('img/render.jpg')">Ver</button>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/render2.jpg" alt="Proyecto 1">
+                <div class="overlay">
+                    <button class="view-btn" onclick="openModal('img/render2.jpg')">Ver</button>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/Actividad C1. Trazo de logotipo.png" alt="Proyecto 1">
+                <div class="overlay">
+                    <button class="view-btn" onclick="openModal('img/Actividad C1. Trazo de logotipo.png')">Ver</button>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/Actividad C2. Trazo de logotipo personal - Render.png" alt="Proyecto 1">
+                <div class="overlay">
+                    <button class="view-btn" onclick="openModal('img/Actividad C2. Trazo de logotipo personal - Render.png')">Ver</button>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/Actividad C3. Cartel tipográfico.png" alt="Proyecto 1">
+                <div class="overlay">
+                    <button class="view-btn" onclick="openModal('img/Actividad C3. Cartel tipográfico.png')">Ver</button>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/Render-Muñeco.png" alt="Proyecto 1">
+                <div class="overlay">
+                    <button class="view-btn" onclick="openModal('img/Render-Muñeco.png')">Ver</button>
+                </div>
+            </div>
+            <!-- Repite por cada imagen -->
+        </div>
+         <h2>Diseños</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="img/Banner.jpg" alt="Proyecto 1">
+                <div class="overlay">
+                    <button class="view-btn" onclick="openModal('img/Banner.jpg')">Ver</button>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/Infografia.jpg" alt="Proyecto 1">
+                <div class="overlay">
+                    <button class="view-btn" onclick="openModal('img/Infografia.jpg')">Ver</button>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/MockuP.jpg" alt="Proyecto 1">
+                <div class="overlay">
+                    <button class="view-btn" onclick="openModal('img/MockuP.jpg')">Ver</button>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/Flyer.jpg" alt="Proyecto 1">
+                <div class="overlay">
+                    <button class="view-btn" onclick="openModal('img/Flyer.jpg')">Ver</button>
+                </div>
+            </div>  
+            <div class="gallery-item">
+                <img src="img/Instagram.png" alt="Proyecto 1">
+                <div class="overlay">
+                    <button class="view-btn" onclick="openModal('img/Instagram.jpg')">Ver</button>
+                </div>
+            </div>  
+            <!-- Repite por cada imagen -->
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+    <script>
+        function openModal(src) {
+            document.getElementById("modal").style.display = "flex";
+            document.getElementById("modal-img").src = src;
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
